@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.poster {
+  border: 1px solid black;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding-bottom: 2%;
+}
+.top-section {
+  display: flex;
+  justify-content: space-around;
+}
+.top-right,
+.top-left {
+  flex: 0.5;
+}
+.top-left > img {
+  width: 110%;
+}
+
+.top-right {
+  padding-left: 5%;
+}
+.middle-section {
+  background-color: #f08080;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.middle-section > h1 {
+  margin-left: 5%;
+}
+
+.middle-section > img {
+  width: 150px;
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-left {
+  border-right: 2px solid black;
+  flex: 0.5;
+}
+.bottom-left > p,
+.bottom-left > h5 {
+  width: 80%;
+  margin-left: 5%;
+  display: inline-block;
+  margin-top: 5%;
+}
+.bottom-right {
+  flex: 0.5;
+  position: relative;
+}
+
+.bottom-right > img {
+  width: 350px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.bottom-right > p,
+.bottom-right > h5 {
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.bottom-msg > h1 {
+  font-size: 120%;
+  text-align: center;
+  color: white;
+}
+.bottom-msg {
+  background-color: lightcoral;
+  padding: 1%;
+  width: 70%;
+  margin-left: 5%;
+  border-radius: 100px;
+}
+/* media query */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1000px) {
+  .top-section {
+    flex-direction: column;
+  }
+
+  .top-left > img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .top-section {
+    flex-direction: column;
+  }
+
+  .heading-container {
+    width: 80% !important;
+  }
+
+  .top-left > img {
+    width: 100%;
+  }
+  .middle-section > h1 {
+    font-size: 100%;
+  }
+  .middle-section > img {
+    width: 30%;
+  }
+  .bottom-section {
+    flex-direction: column;
+  }
+  .bottom-left {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .bottom-msg > h1 {
+    font-size: 80%;
+  }
+  .bottom-msg {
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 100px;
+  }
+}
